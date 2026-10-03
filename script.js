@@ -3,7 +3,6 @@
  * Modern Interactive Client Logic
  * Features:
  * - Realtime Business Hours Status & Today Highlight
- * - Dynamic WhatsApp Automation & Message Builder
  * - Scroll-Driven Animations & Progress Tracker
  * - One-Click Address Copy with Toast
  * - Mobile Navigation
@@ -11,7 +10,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initScheduleStatus();
-  initWhatsAppAutomation();
   initScrollAnimations();
   initAddressCopy();
   initMobileMenu();
@@ -117,92 +115,7 @@ function initScheduleStatus() {
 }
 
 /* ==========================================================================
-   2. WHATSAPP AUTOMATION (Automação de Orçamento)
-   Direct 1-click dispatch to (49) 99935-9754
-   ========================================================================== */
-function initWhatsAppAutomation() {
-  const serviceChips = document.querySelectorAll('.option-chip[data-service]');
-  const vehicleChips = document.querySelectorAll('.option-chip[data-vehicle]');
-  const vehicleModelInput = document.getElementById('wa-vehicle-model');
-  const clientNameInput = document.getElementById('wa-client-name');
-  const periodSelect = document.getElementById('wa-period');
-  const hasPhotosCheck = document.getElementById('wa-has-photos');
-  const previewBubble = document.getElementById('wa-preview-message');
-  const sendButton = document.getElementById('wa-send-btn');
-
-  let selectedService = 'Pintura Automotiva / Retoques';
-  let selectedVehicle = 'Carro de Passeio (Hatch / Sedan)';
-
-  // Select service
-  serviceChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      serviceChips.forEach(c => c.classList.remove('selected'));
-      chip.classList.add('selected');
-      selectedService = chip.getAttribute('data-service');
-      generateWhatsAppText();
-    });
-  });
-
-  // Select vehicle type
-  vehicleChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      vehicleChips.forEach(c => c.classList.remove('selected'));
-      chip.classList.add('selected');
-      selectedVehicle = chip.getAttribute('data-vehicle');
-      generateWhatsAppText();
-    });
-  });
-
-  // Inputs change
-  if (vehicleModelInput) vehicleModelInput.addEventListener('input', generateWhatsAppText);
-  if (clientNameInput) clientNameInput.addEventListener('input', generateWhatsAppText);
-  if (periodSelect) periodSelect.addEventListener('change', generateWhatsAppText);
-  if (hasPhotosCheck) hasPhotosCheck.addEventListener('change', generateWhatsAppText);
-
-  function generateWhatsAppText() {
-    const model = vehicleModelInput && vehicleModelInput.value.trim() ? vehicleModelInput.value.trim() : 'Não informado';
-    const name = clientNameInput && clientNameInput.value.trim() ? clientNameInput.value.trim() : 'Cliente';
-    const period = periodSelect ? periodSelect.value : 'Horário comercial';
-    const hasPhotos = hasPhotosCheck && hasPhotosCheck.checked ? 'Sim, posso enviar fotos pelo WhatsApp' : 'Prefiro levar na oficina para avaliação técnica';
-
-    const greeting = name !== 'Cliente' ? `Olá, sou ${name}!` : `Olá, equipe da A.G estética e pintura automotiva!`;
-
-    const message = 
-`${greeting} 👋
-Gostaria de solicitar um orçamento para meu veículo:
-
-🚗 *Veículo:* ${selectedVehicle}
-📌 *Modelo/Ano:* ${model}
-🛠️ *Serviço de Interesse:* ${selectedService}
-📅 *Preferência:* ${period}
-📸 *Avaliação:* ${hasPhotos}
-
-Poderiam me orientar sobre a disponibilidade e avaliação presencial na oficina em Videira? Obrigado!`;
-
-    if (previewBubble) {
-      previewBubble.textContent = message;
-    }
-
-    return message;
-  }
-
-  // Handle WhatsApp button click
-  if (sendButton) {
-    sendButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      const message = generateWhatsAppText();
-      const phoneNumber = '5549999359754';
-      const encodedUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      window.open(encodedUrl, '_blank', 'noopener,noreferrer');
-    });
-  }
-
-  // Initial call
-  generateWhatsAppText();
-}
-
-/* ==========================================================================
-   3. SCROLL-DRIVEN ANIMATIONS & BEHAVIORS
+   2. SCROLL-DRIVEN ANIMATIONS & BEHAVIORS
    - Scroll Progress bar
    - Sticky header state
    - IntersectionObserver reveals
@@ -275,7 +188,7 @@ function initScrollAnimations() {
 }
 
 /* ==========================================================================
-   4. COPY ADDRESS TO CLIPBOARD
+   3. COPY ADDRESS TO CLIPBOARD
    ========================================================================== */
 function initAddressCopy() {
   const copyButtons = document.querySelectorAll('.copy-address-btn');
@@ -310,7 +223,7 @@ function initAddressCopy() {
 }
 
 /* ==========================================================================
-   5. MOBILE NAVIGATION MENU
+   4. MOBILE NAVIGATION MENU
    ========================================================================== */
 function initMobileMenu() {
   const menuBtn = document.querySelector('.mobile-menu-btn');
