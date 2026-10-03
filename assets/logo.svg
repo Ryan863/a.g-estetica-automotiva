@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Glow filters for neon tubes -->
+    <filter id="neon-glow-red" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur1"/>
+      <feGaussianBlur stdDeviation="9" result="coloredBlur2"/>
+      <feGaussianBlur stdDeviation="18" result="coloredBlur3"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur3"/>
+        <feMergeNode in="coloredBlur2"/>
+        <feMergeNode in="coloredBlur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neon-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur1"/>
+      <feGaussianBlur stdDeviation="8" result="coloredBlur2"/>
+      <feGaussianBlur stdDeviation="16" result="coloredBlur3"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur3"/>
+        <feMergeNode in="coloredBlur2"/>
+        <feMergeNode in="coloredBlur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neon-glow-white" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur1"/>
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feGaussianBlur stdDeviation="14" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Linear Gradients for Car Neon Silhouette -->
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff1a3c"/>
+      <stop offset="60%" stop-color="#ff5500"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+
+    <linearGradient id="hoodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#e0f4ff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+
+    <linearGradient id="swooshGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="50%" stop-color="#00f5c4"/>
+      <stop offset="100%" stop-color="#00aaff"/>
+    </linearGradient>
+
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7700"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient background glow behind car -->
+  <ellipse cx="300" cy="180" rx="220" ry="90" fill="url(#roofGrad)" opacity="0.08" filter="blur(30px)"/>
+  <ellipse cx="300" cy="380" rx="160" ry="40" fill="#00d4ff" opacity="0.06" filter="blur(20px)"/>
+
+  <!-- CAR SILHOUETTE (Matches Image 2) -->
+  <g class="neon-car" transform="translate(10, -10)">
+    <!-- Rear Wing / Spoiler (Right/Rear side) -->
+    <path d="M430 168 L475 160 L485 163 L440 172 Z" fill="#ff2a4b" opacity="0.8" filter="url(#neon-glow-red)"/>
+    <path d="M445 171 L442 195 M472 163 L468 190" stroke="#ff2a4b" stroke-width="4.5" stroke-linecap="round" filter="url(#neon-glow-red)"/>
+
+    <!-- Roofline & Fastback Arc (Red to Orange) -->
+    <path d="M465 195 C450 175 410 152 350 148 C305 145 260 162 230 195" 
+          stroke="url(#roofGrad)" stroke-width="6.5" stroke-linecap="round" fill="none" filter="url(#neon-glow-red)"/>
+
+    <!-- Inner windshield & roof pillar highlight -->
+    <path d="M340 154 C305 152 268 168 245 195" 
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9" filter="url(#neon-glow-white)"/>
+
+    <!-- Side Window Outline -->
+    <path d="M255 195 C275 175 315 165 350 166 C370 167 395 178 410 195 Z" 
+          stroke="#ff6600" stroke-width="3.5" stroke-linejoin="round" fill="none" opacity="0.8" filter="url(#neon-glow-red)"/>
+
+    <!-- Rear Haunch & Rear Wheel Arch -->
+    <path d="M465 195 C475 208 480 225 480 240 C480 270 455 285 435 285 C410 285 395 260 405 240 C412 225 425 210 445 205" 
+          stroke="#ff7700" stroke-width="6" stroke-linecap="round" fill="none" filter="url(#neon-glow-red)"/>
+
+    <!-- Rear Wheel Inner Rim -->
+    <ellipse cx="438" cy="252" rx="20" ry="24" stroke="#ff5500" stroke-width="4" fill="none" filter="url(#neon-glow-red)"/>
+
+    <!-- Center Rocker & Door Contour (Orange to White/Cyan) -->
+    <path d="M250 248 L395 242 M240 262 L390 262" 
+          stroke="url(#bodyGrad)" stroke-width="4.5" stroke-linecap="round" filter="url(#neon-glow-white)"/>
+
+    <!-- Front Hood & Fender line (White to Cyan) -->
+    <path d="M230 195 C190 215 155 235 125 250 C115 254 105 262 108 270 C110 278 125 280 145 280" 
+          stroke="url(#hoodGrad)" stroke-width="6.5" stroke-linecap="round" fill="none" filter="url(#neon-glow-white)"/>
+
+    <!-- Front Wheel Arch -->
+    <path d="M145 280 C155 255 175 245 195 245 C220 245 235 265 232 285" 
+          stroke="#00e5ff" stroke-width="6" stroke-linecap="round" fill="none" filter="url(#neon-glow-cyan)"/>
+
+    <!-- Front Wheel Rim -->
+    <ellipse cx="188" cy="270" rx="22" ry="26" stroke="#00e5ff" stroke-width="4.5" fill="none" filter="url(#neon-glow-cyan)"/>
+
+    <!-- Front Nose & Bumper Cutout (Ice Blue) -->
+    <path d="M108 270 C100 278 102 292 118 296 C135 300 155 298 175 295" 
+          stroke="#00d4ff" stroke-width="5" stroke-linecap="round" fill="none" filter="url(#neon-glow-cyan)"/>
+
+    <!-- Front Headlight Neon Slit -->
+    <path d="M135 248 L170 243" stroke="#ffffff" stroke-width="4" stroke-linecap="round" filter="url(#neon-glow-white)"/>
+
+    <!-- Dynamic Neon Swoosh Under the Front (Green to Cyan - distinctive from image 2) -->
+    <path d="M85 300 C95 315 125 328 170 330 C220 332 285 310 330 280" 
+          stroke="url(#swooshGrad)" stroke-width="7" stroke-linecap="round" fill="none" filter="url(#neon-glow-cyan)"/>
+    <path d="M70 308 C82 328 115 342 165 344 C210 345 265 328 305 305" 
+          stroke="#00ff88" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.9" filter="url(#neon-glow-cyan)"/>
+    <path d="M60 318 C72 338 100 352 145 354" 
+          stroke="#00ffaa" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.75" filter="url(#neon-glow-cyan)"/>
+  </g>
+
+  <!-- NEON LETTERS "A.G." (Faithfully matching Image 2) -->
+  <g class="neon-text" transform="translate(0, 30)">
+    <!-- Letter A -->
+    <path d="M 195 405 L 245 285 L 295 405 M 215 365 L 275 365" 
+          stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#neon-glow-white)"/>
+    <path d="M 195 405 L 245 285 L 295 405 M 215 365 L 275 365" 
+          stroke="#00f0ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- First Dot -->
+    <circle cx="320" cy="398" r="9" fill="#ffffff" stroke="#00f0ff" stroke-width="4" filter="url(#neon-glow-white)"/>
+
+    <!-- Letter G -->
+    <path d="M 440 312 C 425 290 395 282 365 288 C 330 296 312 330 315 365 C 318 400 345 422 385 420 C 420 418 445 395 445 365 L 390 365" 
+          stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#neon-glow-white)"/>
+    <path d="M 440 312 C 425 290 395 282 365 288 C 330 296 312 330 315 365 C 318 400 345 422 385 420 C 420 418 445 395 445 365 L 390 365" 
+          stroke="#00f0ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Second Dot -->
+    <circle cx="475" cy="398" r="9" fill="#ffffff" stroke="#00f0ff" stroke-width="4" filter="url(#neon-glow-white)"/>
+  </g>
+</svg>
