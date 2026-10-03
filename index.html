@@ -50,7 +50,6 @@
 
       <nav class="nav-desktop" aria-label="Navegação Principal">
         <a href="#inicio">Início</a>
-        <a href="#logo-showcase">A Marca</a>
         <a href="#servicos">Serviços</a>
         <a href="#horarios">Horários</a>
         <a href="#localizacao">Como Chegar</a>
@@ -62,8 +61,8 @@
           <span id="header-status-text">Aberto Agora</span>
         </div>
 
-        <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-          <span>WhatsApp</span>
+        <a href="#localizacao" class="btn btn-primary btn-sm">
+          <span>Como Chegar</span>
         </a>
 
         <button class="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
@@ -80,13 +79,12 @@
   <!-- Mobile Drawer Menu -->
   <div id="mobile-drawer" class="mobile-drawer" aria-label="Menu móvel">
     <a href="#inicio" class="mobile-nav-link">Início <span>→</span></a>
-    <a href="#logo-showcase" class="mobile-nav-link">A Marca & Logo Neon <span>→</span></a>
     <a href="#servicos" class="mobile-nav-link">Serviços <span>→</span></a>
     <a href="#horarios" class="mobile-nav-link">Quadro de Horários <span>→</span></a>
     <a href="#localizacao" class="mobile-nav-link">Localização Maps <span>→</span></a>
     <div style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
-      <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="width: 100%;">
-        <span>Chamar no WhatsApp</span>
+      <a href="#localizacao" class="btn btn-primary btn-sm" style="width: 100%;">
+        <span>Como Chegar</span>
       </a>
       <a href="tel:49999359754" class="btn btn-secondary btn-sm" style="width: 100%;">
         <span>Ligar para a Oficina</span>
@@ -114,6 +112,7 @@
             Acabamento impecável, transparência total e compromisso com o resultado que seu carro merece.
           </p>
 
+          <!-- WHATSAPP CTA #1 (NO COMEÇO DA PÁGINA) -->
           <div class="hero-cta-group">
             <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -166,63 +165,12 @@
 
       <!-- Animated Scroll Down Indicator (Mobile & PC) -->
       <div class="scroll-indicator-wrap fade-up-element delay-3 in-view">
-        <button class="scroll-down-btn" data-target="#logo-showcase" aria-label="Descer para a próxima seção">
+        <button class="scroll-down-btn" data-target="#servicos" aria-label="Descer para a seção de serviços">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
         <span class="scroll-label">Desça para explorar</span>
-      </div>
-    </section>
-
-    <!-- ==================== LOGO SPOTLIGHT (Requirement: "logo igual na imagem 2") ==================== -->
-    <section class="logo-spotlight-section" id="logo-showcase">
-      <div class="container">
-        <div class="logo-showcase-box fade-up-element">
-          <div class="logo-display-frame">
-            <img src="assets/neon-logo.jpg" alt="Logo A.G em Neon com silhueta de carro esportivo, teto degradê vermelho-laranja, capô branco e swoosh ciano" class="neon-logo-preview">
-          </div>
-
-          <div class="logo-meta-info">
-            <div class="pill-badge">
-              <span class="pill-dot"></span>
-              <span>IDENTIDADE VISUAL DA OFICINA</span>
-            </div>
-
-            <h3>O EMBLEMA NEON <br><span class="text-gradient-red">A.G AUTOMOTIVA</span></h3>
-
-            <p style="color: var(--text-secondary); line-height: 1.7;">
-              Desenvolvido com inspiração fiel ao luminoso em neon real da oficina (Imagem 2).
-              As linhas dinâmicas representam um cupê superesportivo de alta aerodinâmica com aerofólio traseiro, 
-              simbolizando velocidade, cuidado artesanal e o mais alto rigor técnico na pintura.
-            </p>
-
-            <div class="neon-color-chips">
-              <div class="color-chip">
-                <span class="chip-dot" style="background: #ff1a3c; box-shadow: 0 0 6px #ff1a3c;"></span>
-                <span>Vermelho Neon (Teto)</span>
-              </div>
-              <div class="color-chip">
-                <span class="chip-dot" style="background: #ff8800; box-shadow: 0 0 6px #ff8800;"></span>
-                <span>Laranja Âmbar (Aerofólio)</span>
-              </div>
-              <div class="color-chip">
-                <span class="chip-dot" style="background: #ffffff; box-shadow: 0 0 6px #ffffff;"></span>
-                <span>Branco Puro (Capô / A.G)</span>
-              </div>
-              <div class="color-chip">
-                <span class="chip-dot" style="background: #00ff88; box-shadow: 0 0 6px #00ff88;"></span>
-                <span>Verde & Ciano (Swoosh Frontal)</span>
-              </div>
-            </div>
-
-            <div style="margin-top: 1rem;">
-              <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                <span>Fale Conosco no WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -373,8 +321,8 @@
               Aqui não existe atalho: cada etapa de lixamento, preparação, pintura e acabamento respeita os tempos de secagem e as normas mais exigentes.
             </p>
             <div style="margin-top: 0.5rem;">
-              <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                <span>Falar no WhatsApp</span>
+              <a href="#horarios" class="btn btn-primary">
+                <span>Ver Quadro de Horários</span>
               </a>
             </div>
           </div>
@@ -417,7 +365,7 @@
                 ATENDIMENTO EM VIDEIRA - SC
               </h4>
               <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
-                Estamos prontos para receber você em nossa oficina. Se precisar de uma avaliação prévia, envie fotos pelo WhatsApp ou venha nos visitar no horário comercial.
+                Estamos prontos para receber você em nossa oficina. Para avaliações ou agendamentos, venha nos visitar no horário comercial.
               </p>
             </div>
 
@@ -546,7 +494,6 @@
               </div>
             </div>
 
-            <!-- OCCURRENCE 1 OF PHONE NUMBER -->
             <div class="address-item-group">
               <div class="address-icon-box">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -612,7 +559,7 @@
               COMPROMISSO COM A VERDADE & TRANSPARÊNCIA
             </h4>
             <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-              Aqui na <strong>A.G estética e pintura automotiva</strong> prezamos pelo trabalho sério e transparente. O diagnóstico da lataria e pintura do seu veículo é realizado com critérios técnicos rigorosos, seja presencialmente em nossa oficina ou pelo WhatsApp.
+              Aqui na <strong>A.G estética e pintura automotiva</strong> prezamos pelo trabalho sério e transparente. O diagnóstico da lataria e pintura do seu veículo é realizado com critérios técnicos rigorosos, seja presencialmente em nossa oficina ou no atendimento direto.
             </p>
           </div>
         </div>
@@ -648,14 +595,13 @@
           <h5>Navegação</h5>
           <ul class="footer-links-list">
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#logo-showcase">A Marca & Logo Neon</a></li>
             <li><a href="#servicos">Nossos Serviços</a></li>
             <li><a href="#horarios">Quadro de Horários</a></li>
             <li><a href="#localizacao">Google Maps</a></li>
           </ul>
         </div>
 
-        <!-- OCCURRENCE 2 OF PHONE NUMBER -->
+        <!-- WHATSAPP CTA #2 (NO FINAL DA PÁGINA) -->
         <div class="footer-col">
           <h5>Horários & Contato</h5>
           <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
@@ -663,7 +609,7 @@
             <strong>Domingo:</strong> Fechado
           </p>
           <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="margin-top: 0.5rem;">
-            <span>WhatsApp (49) 99935-9754</span>
+            <span>Falar no WhatsApp (49) 99935-9754</span>
           </a>
         </div>
       </div>
@@ -675,19 +621,15 @@
     </div>
   </footer>
 
-  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
-  <a href="https://wa.me/5549999359754?text=Ol%C3%A1%2C%20equipe%20da%20A.G%20est%C3%A9tica%20e%20pintura%20automotiva!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os." 
-     target="_blank" rel="noopener noreferrer" 
-     class="floating-wa-btn" 
-     aria-label="Abrir conversa no WhatsApp">
-    <span class="floating-wa-tooltip">Falar no WhatsApp</span>
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.146-.086-.301-.097-.685-.246-1.187-.464-2.112-.916-3.483-3.08-3.589-3.22-.106-.14-1.026-1.365-1.026-2.603 0-1.239.65-1.849.882-2.102.233-.253.509-.317.678-.317.17 0 .339.002.487.01.157.008.368-.06.577.44.212.507.72 1.758.784 1.885.064.127.106.275.021.444-.085.169-.127.275-.254.423-.127.148-.269.331-.384.444-.127.127-.26.264-.112.518.148.254.657 1.082 1.408 1.751.968.862 1.784 1.129 2.038 1.256.254.127.402.106.551-.063.148-.169.635-.74.805-.994.169-.254.338-.212.571-.127.233.085 1.482.698 1.736.825.254.127.423.19.487.296.063.106.063.614-.081 1.019z"/>
-    </svg>
-  </a>
-
   <!-- ==================== MOBILE BOTTOM BAR ==================== -->
   <div class="mobile-bottom-bar" aria-label="Ações rápidas mobile">
+    <a href="#inicio" class="mobile-bottom-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      </svg>
+      <span>Início</span>
+    </a>
+
     <a href="#servicos" class="mobile-bottom-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
@@ -701,13 +643,6 @@
         <polyline points="12 6 12 12 16 14"></polyline>
       </svg>
       <span>Horários</span>
-    </a>
-
-    <a href="https://wa.me/5549999359754" target="_blank" rel="noopener noreferrer" class="mobile-bottom-item">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.146-.086-.301-.097-.685-.246-1.187-.464-2.112-.916-3.483-3.08-3.589-3.22-.106-.14-1.026-1.365-1.026-2.603 0-1.239.65-1.849.882-2.102.233-.253.509-.317.678-.317.17 0 .339.002.487.01.157.008.368-.06.577.44.212.507.72 1.758.784 1.885.064.127.106.275.021.444-.085.169-.127.275-.254.423-.127.148-.269.331-.384.444-.127.127-.26.264-.112.518.148.254.657 1.082 1.408 1.751.968.862 1.784 1.129 2.038 1.256.254.127.402.106.551-.063.148-.169.635-.74.805-.994.169-.254.338-.212.571-.127.233.085 1.482.698 1.736.825.254.127.423.19.487.296.063.106.063.614-.081 1.019z"/>
-      </svg>
-      <span>WhatsApp</span>
     </a>
 
     <a href="#localizacao" class="mobile-bottom-item">
